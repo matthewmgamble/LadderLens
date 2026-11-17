@@ -1,0 +1,81 @@
+[2026-11-17T20:48:03Z,253] 729 000b com.sonus.sbc.sip <PID 4879> INFO (CallSession.cpp:2885) - {InviteServer SG(1):17955d 0xd821400 Connected 0x10bf6a50 [1:0:1:33][CID:5183]} disconnect:Sent Final Bye/Cancel cancelCreate:0, cancelSentB4:0
+[2026-11-17T20:48:03Z,253] 730 0002 com.sonus.sbc.sip <PID 4879> INFO (CallSession.cpp:974) - {InviteServer SG(1):17955d 0xd821400 Terminated (nil) [1:0:1:33][CID:5183]} StateTerminatedEntry:SessionId=17955d completed dlg=0x130cf00
+[2026-11-17T20:48:06Z,612] 736 0008 com.sonus.sbc.sip <PID 4879> INFO (OptionsSession.cpp:531) - {OptionsClient SG(1):13a42a 0x108c000 NwkConnecting} cleanup:Options Stop and Delete Transaction
+[2026-11-17T20:48:06Z,612] 736 0007 com.sonus.sbc.sip <PID 4879> INFO (OptionsSession.cpp:546) - {OptionsClient SG(1):13a42a 0x108c000 NwkConnecting} Stop:Options Stop Refresh and RetryOnFailure timers
+[2026-11-17T20:48:11Z,783] 752 0002 com.sonus.sbc.sip.libctl <PID 4879> INFO (TransportTlsSocket.cpp:1061) - RX Server data pending size: 0, used size: 2174 for conn_id: 36985 on handle: 0x116dd000, fd=244, retry: 0, retry attempts: 0
+[2026-11-17T20:48:11Z,783] 752 0001 com.sonus.sbc.sip <PID 4879> INFO (TransportLayer.cpp:1362) - DataReadCB:Incoming message on [10.21.205.68]:5061 from [52.114.132.46] after CRLF is truncated:52154 size=2174, data: 0x116fd530, current chunk: 0
+[2026-11-17T20:48:11Z,783] 752 0031 com.sonus.sbc.sip <PID 4879> INFO (sipApplication.cpp:3509) - tlDataReceived:Received message on [10.21.205.68]:5061 from [52.114.132.46]:52154
+[2026-11-17T20:48:11Z,783] 752 0030 com.sonus.log.sbc INFO (sipApplication.cpp:3510) - originalLen:2174 decodedLength:2174 decoded 0x15aaa00:
+[2026-11-17T20:48:11Z,783] 752 002f MSGID:455754 SIZE:820 PART:001-003
+
+INVITE sip:+15554004004@sbc-01.sbc.example.com:5061;user=phone;transport=tls SIP/2.0
+From: <sip:+15553003003@sip.pstnhub.microsoft.com:5061;user=phone>;tag=fcec497c2056435d8b282921d135a183
+To: <sip:+15554004004@sbc-01.sbc.example.com:5061;user=phone>
+Via: SIP/2.0/TLS 52.114.132.46;branch=z9hG4bKd43d1fb3
+CSeq: 1 INVITE
+Call-ID: ab20559912b45ca88558940b813b2f31
+Max-Forwards: 70
+Record-Route: <sip:sip-du-a-us.pstnhub.microsoft.com:5061;transport=tls;lr>
+Allow: ACK,BYE,CANCEL,INVITE,NOTIFY,OPTIONS
+Contact: <sip:api-du-b-usea.pstnhub.microsoft.com:443>
+Content-Length: 1197
+Min-SE: 300
+Supported: histinfo,timer
+User-Agent: Microsoft.PSTNHub.SIPProxy v.2026.10.26.7 i.USE
+[2026-11-17T20:48:11Z,783] 753 0028 com.sonus.sbc.sip <PID 4879> INFO (sipSignalingGroup.cpp:2115) - {SG(1) 0x1228840} ProcessTransportMessage:Protocol Repair,calling Ingress executive(1 item(s) on list)
+[2026-11-17T20:48:11Z,783] 753 0027 com.sonus.sbc.sip <PID 4879> INFO (Executive.cpp:108) - SMM Rules Modified Msg:
+[2026-11-17T20:48:11Z,783] 753 0026
+
+INVITE sip:+15554004004@sbc-01.sbc.example.com:5061;user=phone;transport=tls SIP/2.0
+Allow: ACK,BYE,CANCEL,INVITE,NOTIFY,OPTIONS
+Call-ID: ab20559912b45ca88558940b813b2f31
+Contact: <sip:api-du-b-usea.pstnhub.microsoft.com:443>
+Content-Length: 1197
+CSeq: 1 INVITE
+From: "jane.doe" <sip:+15553003003@sip.pstnhub.microsoft.com:5061;user=phone>;tag=fcec497c2056435d8b282921d135a183
+Max-Forwards: 70
+Min-SE: 300
+P-Asserted-Identity: <tel:+15557007007;ext=28585>
+Privacy: id
+Record-Route: <sip:sip-du-a-us.pstnhub.microsoft.com:5061;transport=tls;lr>
+Session-Expires: 3600
+Supported: histinfo,timer
+To:  <sip:+15554004004@sbc-01.sbc.example.com:5061;user=phone>
+User-Agent: Microsoft.PSTNHub.SIPProxy v.2026.10.26.7 i.USEA.7
+Via: SIP/2.0/TLS 52.114.132.46;branch=z9hG4bKd43d1fb3
+
+[2026-11-17T20:48:11Z,783] 753 0023 com.sonus.sbc.sip <PID 4879> INFO (sipSignalingGroup.cpp:3196) - {SG(1) 0x1228840} AddSession:AddSession GCID: 5184 Call ID: ab20559912b45ca88558940b813b2f31, Total = 3, sgid = 1
+[2026-11-17T20:48:11Z,784] 754 0021 com.sonus.sbc.sip <PID 4879> INFO (CallSession.cpp:3750) - {InviteServer SG(1):179561 0xd821400 Proceeding (nil) [1:0:0:0][CID:5184]} sendToSipUser:Handling initial invite.
+[2026-11-17T20:48:11Z,784] 754 001f com.sonus.sbc.ccc <PID 3881> INFO (smmgr.h:269) - [63291] Received REQ MSG_CC_SETUP/0x289bc60 Parent Session Handle:0x22bf290 Session Handle:0x287e210
+[2026-11-17T20:48:11Z,784] 754 001d com.sonus.sbc.ccc <PID 3881> INFO (fsmco.cpp:3857) - [63293][CID:5184] Requesting call route for route table 2, called# [+15554004004]
+[2026-11-17T20:48:11Z,786] 757 0015 com.sonus.sbc.sip <PID 4879> INFO (CallSession.cpp:10330) - {InviteServer SG(1):179561 0xd821400 Proceeding 0x116e7340 [1:0:0:0][CID:5184]} HandleCCAck:Received IE_MediaMode_IE 1
+[2026-11-17T20:48:11Z,786] 757 0014 com.sonus.sbc.sip <PID 4879> INFO (Transaction.cpp:807) - SMM Rules Original Msg sending from [127.0.0.1]:0 to [127.0.0.1]:0
+[Before SMM]
+[2026-11-17T20:48:11Z,786] 757 0013
+
+SIP/2.0 100 Trying
+Allow: INVITE, ACK, CANCEL, BYE, NOTIFY, OPTIONS, REFER, REGISTER, INFO, UPDATE
+Call-ID: ab20559912b45ca88558940b813b2f31
+Content-Length: 0
+CSeq: 1 INVITE
+From: "jane.doe" <sip:+15553003003@sip.pstnhub.microsoft.com:5061;user=phone>;tag=fcec497c2056435d8b282921d135a183
+Server: SONUS SBCSWeLite 13.0.0v37 Azure Ribbon SBC Edge
+To:  <sip:+15554004004@sbc-01.sbc.example.com:5061;user=phone>;tag=a15cd04-1794f0;sgid=1
+Via: SIP/2.0/TLS 52.114.132.46;branch=z9hG4bKd43d1fb3
+X-MS-SBC: Ribbon/SWeLite/13.0.0v37
+
+[2026-11-17T20:48:11Z,786] 758 0011 com.sonus.sbc.sip <PID 4879> INFO (TransportLayer.cpp:899) - 0x1170e240 sending from [10.21.205.68]:5061 to [52.114.132.46]:52154 GCID=5184, size=551 over 01TLS128352-5061 attempt(1) (If:37) ln(2613):
+[2026-11-17T20:48:11Z,786] 758 0010 MSGID:455755 SIZE:551 PART:001-001
+
+SIP/2.0 100 Trying
+Allow: INVITE, ACK, CANCEL, BYE, NOTIFY, OPTIONS, REFER, REGISTER, INFO, UPDATE
+Call-ID: ab20559912b45ca88558940b813b2f31
+Content-Length: 0
+CSeq: 1 INVITE
+From: "jane.doe" <sip:+15553003003@sip.pstnhub.microsoft.com:5061;user=phone>;tag=fcec497c2056435d8b282921d135a183
+Server: SONUS SBCSWeLite 13.0.0v37 Azure Ribbon SBC Edge
+To:  <sip:+15554004004@sbc-01.sbc.example.com:5061;user=phone>;tag=a15cd04-1794f0;sgid=1
+Via: SIP/2.0/TLS 52.114.132.46;branch=z9hG4bKd43d1fb3
+X-MS-SBC: Ribbon/SWeLite/13.0.0v37
+
+[2026-11-17T20:48:11Z,786] 758 000e com.sonus.sbc.sip <PID 4879> INFO (CallSession.cpp:9783) - {InviteClient SG(4):179562 0x1cf2800 Initial 0x10e98f20 [1:0:4:45][CID:5184]} HandleCCSetup:Next hop is  [203.0.113.20]:5061 CR=0

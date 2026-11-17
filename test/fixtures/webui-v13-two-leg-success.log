@@ -1,0 +1,221 @@
+[2026-11-17T14:00:24Z,070] 509 0001 com.sonus.sbc.sip <PID 4879> INFO (TransportLayer.cpp:1362) - DataReadCB:Incoming message on [10.21.205.68]:5061 from [52.114.148.0] after CRLF is truncated:18243 size=2180, data: 0x114d7bb0, current chunk: 0
+[2026-11-17T14:00:24Z,070] 509 0031 com.sonus.sbc.sip <PID 4879> INFO (sipApplication.cpp:3509) - tlDataReceived:Received message on [10.21.205.68]:5061 from [52.114.148.0]:18243
+[2026-11-17T14:00:24Z,070] 509 0030 com.sonus.log.sbc INFO (sipApplication.cpp:3510) - originalLen:2180 decodedLength:2180 decoded 0x11026700:
+[2026-11-17T14:00:24Z,070] 509 002f MSGID:426897 SIZE:820 PART:001-003
+
+INVITE sip:+15555005005@sbc-01.sbc.example.com:5061;user=phone;transport=tls SIP/2.0
+From: <sip:+15556006006@sip.pstnhub.microsoft.com:5061;user=phone>;tag=f54952e6709b44e3b4f3b8e3344e2b91
+To: <sip:+15555005005@sbc-01.sbc.example.com:5061;user=phone>
+Via: SIP/2.0/TLS 52.114.148.0;branch=z9hG4bK06424470
+CSeq: 1 INVITE
+Call-ID: 244249a6119850f98ca67aa86d549a96
+Max-Forwards: 70
+Record-Route: <sip:sip-du-a-us.pstnhub.microsoft.com:5061;transport=tls;lr>
+Allow: ACK,BYE,CANCEL,INVITE,NOTIFY,OPTIONS
+Contact: <sip:api-du-b-uswe2.pstnhub.microsoft.com:443>
+Content-Length: 1197
+Min-SE: 300
+Supported: histinfo,timer
+User-Agent: Microsoft.PSTNHub.SIPProxy v.2026.10.26.7 i.USW
+[2026-11-17T14:00:24Z,070] 509 002e com.sonus.log.sbc INFO (sipApplication.cpp:3510) - tlDataReceived: Receive message on [10.21.205.68]:5061 from [52.114.148.0]:18243
+[2026-11-17T14:00:24Z,070] 509 002d com.sonus.log.sbc INFO (sipApplication.cpp:3510) - originalLen:2180 decodedLength:2180 decoded 0x11026700:
+[2026-11-17T14:00:24Z,070] 509 002c MSGID:426897 SIZE:820 PART:002-003
+
+E2.12
+Content-Type: application/sdp
+P-Asserted-Identity: <tel:+15557007007;ext=29781>,<sip:john.smith@example.com>
+Privacy: id
+Session-Expires: 3600
+
+v=0
+o=- 150146 0 IN IP4 127.0.0.1
+s=session
+c=IN IP4 52.115.232.218
+b=CT:10000000
+t=0 0
+m=audio 50332 RTP/SAVP 104 9 0 8 101 13
+c=IN IP4 52.115.232.218
+a=rtpmap:104 SILK/16000
+a=rtpmap:9 G722/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-16
+a=rtpmap:13 CN/8000
+a=ptime:20
+a=sendrecv
+a=label:mai
+[2026-11-17T14:00:24Z,070] 509 002b com.sonus.log.sbc INFO (sipApplication.cpp:3510) - tlDataReceived: Receive message on [10.21.205.68]:5061 from [52.114.148.0]:18243
+[2026-11-17T14:00:24Z,070] 510 002a com.sonus.log.sbc INFO (sipApplication.cpp:3510) - originalLen:2180 decodedLength:2180 decoded 0x11026700:
+[2026-11-17T14:00:24Z,070] 510 0029 MSGID:426897 SIZE:540 PART:003-003
+
+n-audio
+a=mid:1
+a=crypto:1 AES_CM_128_HMAC_SHA1_80 inline:REDACTED|2^31
+a=sendrecv
+
+[2026-11-17T14:00:24Z,071] 510 0028 com.sonus.sbc.sip <PID 4879> INFO (sipSignalingGroup.cpp:2115) - {SG(1) 0x1228840} ProcessTransportMessage:Protocol Repair,calling Ingress executive(1 item(s) on list)
+[2026-11-17T14:00:24Z,071] 510 0027 com.sonus.sbc.sip <PID 4879> INFO (Executive.cpp:108) - SMM Rules Modified Msg:
+[2026-11-17T14:00:24Z,071] 510 0026
+
+INVITE sip:+15555005005@sbc-01.sbc.example.com:5061;user=phone;transport=tls SIP/2.0
+Allow: ACK,BYE,CANCEL,INVITE,NOTIFY,OPTIONS
+Call-ID: 244249a6119850f98ca67aa86d549a96
+Contact: <sip:api-du-b-uswe2.pstnhub.microsoft.com:443>
+Content-Length: 1197
+Content-Type: application/sdp
+CSeq: 1 INVITE
+From: "john.smith" <sip:+15556006006@sip.pstnhub.microsoft.com:5061;user=phone>;tag=f54952e6709b44e3b4f3b8e3344e2b91
+Max-Forwards: 70
+Min-SE: 300
+P-Asserted-Identity: <tel:+15557007007;ext=29781>
+Privacy: id
+Record-Route: <sip:sip-du-a-us.pstnhub.microsoft.com:5061;transport=tls;lr>
+Session-Expires: 3600
+Supported: histinfo,timer
+To:  <sip:+15555005005@sbc-01.sbc.example.com:5061;user=phone>
+User-Agent: Microsoft.PSTNHub.SIPProxy v.2026.10.26.7 i.USWE2.12
+Via: SIP/2.0/TLS 52.114.148.0;branch=z9hG4bK06424470
+
+v=0
+o=- 150146 0 IN IP4 127.0.0.1
+s=session
+c=IN IP4 52.115.232.218
+b=CT:10000000
+t=0 0
+m=audio 50332 RTP/SAVP 104 9 0 8 101 13
+c=IN IP4 52.115.232.218
+a=rtpmap:104 SILK/16000
+a=rtpmap:9 G722/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-16
+a=rtpmap:13 CN/8000
+a=ptime:20
+a=sendrecv
+
+[2026-11-17T14:00:24Z,071] 510 0025 com.sonus.sbc.sip <PID 4879> INFO (CallSession.cpp:3750) - {InviteServer SG(1):1787a0 0x18ea000 Proceeding (nil) [1:0:0:0][CID:5105]} sendToSipUser:Handling initial invite.
+[2026-11-17T14:00:24Z,072] 511 001d com.sonus.sbc.ccc <PID 3881> INFO (fsmco.cpp:3857) - [56283][CID:5105] Requesting call route for route table 2, called# [+15555005005]
+[2026-11-17T14:00:24Z,073] 515 000f com.sonus.sbc.sip <PID 4879> INFO (CallSession.cpp:9783) - {InviteClient SG(4):1787a1 0x1cef400 Initial 0x11612a50 [1:0:4:18][CID:5105]} HandleCCSetup:Next hop is  [203.0.113.10]:5061 CR=0
+[2026-11-17T14:00:24Z,140] 520 000d com.sonus.sbc.sip <PID 4879> INFO (Transaction.cpp:807) - SMM Rules Original Msg sending from [127.0.0.1]:0 to [127.0.0.1]:0
+[Before SMM]
+[2026-11-17T14:00:24Z,140] 520 000c
+
+INVITE sip:+15555005005@203.0.113.10:5061;user=phone SIP/2.0
+Allow: INVITE, ACK, CANCEL, BYE, NOTIFY, OPTIONS, REFER, REGISTER, INFO, UPDATE, PRACK
+Call-ID: call-31089CBD-0300-0010-0609-1BBC1@192.0.2.100
+Contact: <sip:+15556006006@sbc-01.sbc.example.com:5061;transport=TLS;maddr=192.0.2.100>
+Content-Length: 500
+Content-Type: application/sdp
+CSeq: 2 INVITE
+From: "john.smith" <sip:+15556006006@192.0.2.100:5061;user=phone>;tag=a15cd04-178734;sgid=4
+Max-Forwards: 69
+Min-SE: 600
+Session-Expires: 3600
+Supported: replaces,update,timer,100rel
+To:  <sip:+15555005005@203.0.113.10:5061;user=phone>
+User-Agent: SONUS SBCSWeLite 13.0.0v37 Azure Ribbon SBC Edge
+Via: SIP/2.0/TLS 192.0.2.100:5061;branch=z9hG4bK-UX-0a15-cd04-321246
+
+v=0
+o=SBC 5105 1001 IN IP4 192.0.2.100
+s=VoipCall
+c=IN IP4 192.0.2.100
+t=0 0
+m=audio 16922 RTP/AVP 0 104 9 103 18 8 101 13
+a=rtpmap:0 PCMU/8000
+a=rtpmap:104 SILK/16000
+a=rtpmap:9 G722/8000
+a=rtpmap:103 SILK/8000
+a=rtpmap:18 G729/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-15
+a=rtpmap:13 CN/8000
+a=ptime:20
+a=sendrecv
+
+[2026-11-17T14:00:24Z,140] 520 0008 com.sonus.sbc.sip <PID 4879> INFO (Executive.cpp:108) - SMM Rules Modified Msg:
+[2026-11-17T14:00:24Z,140] 520 0007
+
+INVITE sip:+15555005005@203.0.113.10:5061;user=phone SIP/2.0
+Allow: INVITE, ACK, CANCEL, BYE, NOTIFY, OPTIONS, REFER, REGISTER, INFO, UPDATE, PRACK
+Call-ID: call-31089CBD-0300-0010-0609-1BBC1@192.0.2.100
+Contact: <sip:+15556006006@sbc-01.sbc.example.com:5061;transport=TLS;maddr=192.0.2.100>
+Content-Length: 500
+Content-Type: application/sdp
+CSeq: 2 INVITE
+From: "john.smith" <sip:+15556006006@192.0.2.100:5061;user=phone>;tag=a15cd04-178734;sgid=4
+Max-Forwards: 69
+Min-SE: 600
+P-Asserted-Identity: "john.smith" <sip:+15556006006@192.0.2.100:5061;user=phone>
+Session-Expires: 3600
+Supported: replaces,update,timer,100rel
+To:  <sip:+15555005005@203.0.113.10:5061;user=phone>
+User-Agent: SONUS SBCSWeLite 13.0.0v37 Azure Ribbon SBC Edge
+Via: SIP/2.0/TLS 192.0.2.100:5061;branch=z9hG4bK-UX-0a15-cd04-321246
+
+v=0
+o=SBC 5105 1001 IN IP4 192.0.2.100
+s=VoipCall
+c=IN IP4 192.0.2.100
+t=0 0
+m=audio 16922 RTP/AVP 0 104 9 103 18 8 101 13
+a=rtpmap:0 PCMU/8000
+a=rtpmap:104 SILK/16000
+a=rtpmap:9 G722/8000
+a=rtpmap:103 SILK/8000
+a=rtpmap:18 G729/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-15
+a=rtpmap:13 CN/8000
+a=ptime:20
+a=sendrecv
+
+[2026-11-17T14:00:24Z,140] 520 0005 com.sonus.sbc.sip <PID 4879> INFO (TransportLayer.cpp:899) - 0x82cd180 sending from [10.21.205.68]:27396 to [203.0.113.10]:5061 GCID=5105, size=1358 over 00TLS119775-27396 attempt(1) (If:37) ln(858):
+[2026-11-17T14:00:24Z,140] 520 0004 MSGID:426899 SIZE:820 PART:001-002
+
+INVITE sip:+15555005005@203.0.113.10:5061;user=phone SIP/2.0
+Allow: INVITE, ACK, CANCEL, BYE, NOTIFY, OPTIONS, REFER, REGISTER, INFO, UPDATE, PRACK
+Call-ID: call-31089CBD-0300-0010-0609-1BBC1@192.0.2.100
+Contact: <sip:+15556006006@sbc-01.sbc.example.com:5061;transport=TLS;maddr=192.0.2.100>
+Content-Length: 500
+Content-Type: application/sdp
+CSeq: 2 INVITE
+From: "john.smith" <sip:+15556006006@192.0.2.100:5061;user=phone>;tag=a15cd04-178734;sgid=4
+Max-Forwards: 69
+Min-SE: 600
+P-Asserted-Identity: "john.smith" <sip:+15556006006@192.0.2.100:5061;user=phone>
+Session-Expires: 3600
+Supported: replaces,update,timer,100rel
+[2026-11-17T14:00:24Z,140] 520 0003 MSGID:426899 SIZE:538 PART:002-002
+
+To:  <sip:+15555005005@203.0.113.10:5061;user=phone>
+User-Agent: SONUS SBCSWeLite 13.0.0v37 Azure Ribbon SBC Edge
+Via: SIP/2.0/TLS 192.0.2.100:5061;branch=z9hG4bK-UX-0a15-cd04-321246
+
+v=0
+o=SBC 5105 1001 IN IP4 192.0.2.100
+s=VoipCall
+c=IN IP4 192.0.2.100
+t=0 0
+m=audio 16922 RTP/AVP 0 104 9 103 18 8 101 13
+a=rtpmap:0 PCMU/8000
+a=rtpmap:104 SILK/16000
+a=rtpmap:9 G722/8000
+a=rtpmap:103 SILK/8000
+a=rtpmap:18 G729/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-15
+a=rtpmap:13 CN/8000
+a=ptime:20
+a=sendrecv
+
+[2026-11-17T14:00:24Z,969] 523 0002 com.sonus.sbc.sip <PID 4879> INFO (CallSession.cpp:4573) - {InviteClient SG(4):1787a1 0x1cef400 Proceeding 0x11612a50 [1:0:4:18][CID:5105]} sendToSipUser:SendToSipUser SIP Response 183 invite isInitInvite=1
+[2026-11-17T14:00:27Z,385] 537 0021 com.sonus.sbc.sip <PID 4879> INFO (CallSession.cpp:4573) - {InviteClient SG(4):1787a1 0x1cef400 Connected 0x11612a50 [1:0:4:18][CID:5105]} sendToSipUser:SendToSipUser SIP Response 200 invite isInitInvite=1
+[2026-11-17T14:02:09Z,320] 675 0012 com.sonus.sbc.sip <PID 4879> INFO (CallSession.cpp:4947) - {InviteServer SG(1):1787a0 0x18ea000 Connected 0x10bf6a50 [1:0:1:5][CID:5105]} sendToSipUser:Sending MSG_CC_RLC to UA session(0x10bf6a50).
+[2026-11-17T14:02:09Z,320] 677 000e com.sonus.sbc.sip <PID 4879> INFO (CallSession.cpp:11025) - {InviteClient SG(4):1787a1 0x1cef400 Connected 0x11612a50 [1:0:4:18][CID:5105]} HandleCCRlc:HandleCCRlc state=2 orig=1. Stop Disc Timer
+[2026-11-17T14:02:09Z,320] 677 0003 com.sonus.sbc.ccc <PID 3881> INFO (sp.cpp:2247) - [56361][CID:5105] Sending RLC with cause code 16
